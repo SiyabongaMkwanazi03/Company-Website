@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navbar', { active: active }) %>
+
+    <main>
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>We guide you through every step of the process to achieve measurable results.</p>
+
+            <div class="flip-boxes-container">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h3>Step 1</h3>
+                        </div>
+                        <div class="flip-box-back">
+                            <h3>Discovery & Strategy</h3>
+                            <p>Start with a complimentary consultation. We analyze your current processes, identify gaps, and create a customized roadmap—completely yours to use.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h3>Step 2</h3>
+                        </div>
+                        <div class="flip-box-back">
+                            <h3>Implementation</h3>
+                            <p>Clear scope, predictable costs. We build and deploy your solution in 2–4 weeks with a transparent, efficient process and no surprises.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h3>Step 3</h3>
+                        </div>
+                        <div class="flip-box-back">
+                            <h3>Scale & Optimize</h3>
+                            <p>We manage, refine, and report monthly. Your system continuously improves, delivering stronger results over time with dedicated support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="FAQ">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our services and processes.</p>
+
+            <div class="faq-item">
+                <h3>How long does a typical project take? <span>▼</span></h3>
+                <p class="answer">Project timelines vary based on scope and complexity. Simple projects typically take 2-4 weeks, while larger projects can take 2-3 months. We provide detailed timelines after an initial consultation with your requirements.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer ongoing support? <span>▼</span></h3>
+                <p class="answer">Yes! We provide comprehensive maintenance and support packages to keep your digital assets running smoothly. Our support includes bug fixes, updates, security patches, and performance optimization.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What's your pricing model? <span>▼</span></h3>
+                <p class="answer">We offer flexible pricing tailored to your budget and project requirements. We can work with fixed-price projects, hourly rates, or retainer models depending on your needs. Contact us for a custom quote.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you work with startups? <span>▼</span></h3>
+                <p class="answer">Absolutely! We love working with startups and understand the unique challenges of getting a business off the ground. We offer startup-friendly packages and flexible payment terms.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What technologies do you use? <span>▼</span></h3>
+                <p class="answer">We use modern, industry-standard technologies including HTML5, CSS3, JavaScript, React, Node.js, and various cloud platforms. We choose the best technology stack based on your project requirements.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can you help with SEO? <span>▼</span></h3>
+                <p class="answer">Yes! We provide SEO services to help your website rank higher in search engines. Our team implements best practices for on-page optimization, technical SEO, and content strategy.</p>
+            </div>
+
+            <a href="/contact" class="btn">Still have questions? Contact us!</a>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+</body>
+</html>

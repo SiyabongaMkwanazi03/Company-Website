@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <a href="/" class="logo">
+        <img src="/images/company.png" alt="SMK Digitals Logo">
+    </a>
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="/" class="nav-link <%= active === 'home' ? 'active' : '' %>">Home</a></li>
+        <li><a href="/services" class="nav-link <%= active === 'services' ? 'active' : '' %>">Our Services</a></li>
+        <li><a href="/media-hub" class="nav-link <%= active === 'media-hub' ? 'active' : '' %>">Media Hub</a></li>
+        <li><a href="/faq" class="nav-link <%= active === 'faq' ? 'active' : '' %>">FAQ</a></li>
+        <li><a href="/contact" class="nav-link <%= active === 'contact' ? 'active' : '' %>">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>

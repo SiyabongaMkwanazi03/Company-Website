@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navbar', { active: active }) %>
+
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a comprehensive range of digital services designed to elevate your brand and drive growth. Choose from our specialized solutions:</p>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>🌐 Web Development</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Custom websites and applications built with cutting-edge technology. We create responsive, fast, and user-friendly digital solutions that convert visitors into customers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>📱 Digital Marketing</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Strategic campaigns designed to reach your target audience. From SEO to social media marketing, we help your business gain visibility and attract qualified leads.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>🎨 UI/UX Design</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Beautiful, user-centric design that not only looks great but also converts. Our design team creates intuitive interfaces that enhance user experience and drive engagement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>☁️ Cloud Solutions</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Scalable infrastructure for modern businesses. We provide secure, reliable cloud services that grow with your business and ensure 99.9% uptime.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>📊 Analytics &amp; Reporting</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Data-driven insights to optimize your digital presence. We provide detailed reports and analytics to help you understand your audience and improve performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h3>🔒 Cybersecurity</h3>
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Comprehensive security audits, monitoring, and compliance support to keep your data and your customers' data safe and protected.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/contact" class="btn">Get Started Today</a>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+</body>
+</html>

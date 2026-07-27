@@ -1,0 +1,274 @@
+cat > /mnt/user-data/outputs/media-hub.ejs << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navbar', { active: active }) %>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-text">
+                <h2>Media Hub</h2>
+                <p>News, insights, and updates from our team — the latest on what we're building, who we're working with, and where the industry is headed.</p>
+            </div>
+        </section>
+
+        <!-- Media Hub Section -->
+        <section id="media-hub">
+
+            <!-- Filter Bar -->
+            <div class="media-filter-bar">
+                <button class="active" onclick="filterArticles('all', this)">All</button>
+                <button onclick="filterArticles('news', this)">News</button>
+                <button onclick="filterArticles('insights', this)">Insights</button>
+                <button onclick="filterArticles('press', this)">Press</button>
+            </div>
+
+            <!-- Featured Article -->
+            <div class="featured-article">
+                <div class="featured-content">
+                    <span class="article-tag">News</span>
+                    <h3>Expanding Our Global Footprint: What's Next for 2026</h3>
+                    <div class="article-meta">
+                        <span>July 18, 2026</span>
+                        <span>6 min read</span>
+                    </div>
+                    <p>A look at our latest expansion milestones, the new regions we're entering, and how it strengthens our ability to serve clients worldwide.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 0)">Read full story &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="media-grid">
+
+                <div class="article-card" data-category="insights">
+                    <span class="article-tag">Insights</span>
+                    <h3>Three Trends Reshaping the Industry This Year</h3>
+                    <div class="article-meta">
+                        <span>July 10, 2026</span>
+                        <span>5 min read</span>
+                    </div>
+                    <p>Our team breaks down the shifts we're watching closely and what they mean for organizations planning ahead.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 1)">Read more &rarr;</a>
+                </div>
+
+                <div class="article-card" data-category="press">
+                    <span class="article-tag">Press</span>
+                    <h3>We've Been Featured in Global Business Review</h3>
+                    <div class="article-meta">
+                        <span>June 28, 2026</span>
+                        <span>3 min read</span>
+                    </div>
+                    <p>A short recap of our recent feature and the conversation on how we approach client partnerships.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 2)">Read more &rarr;</a>
+                </div>
+
+                <div class="article-card" data-category="news">
+                    <span class="article-tag">News</span>
+                    <h3>Announcing Our New Regional Partnership</h3>
+                    <div class="article-meta">
+                        <span>June 15, 2026</span>
+                        <span>4 min read</span>
+                    </div>
+                    <p>Details on our newest partnership and what it unlocks for clients in the region.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 3)">Read more &rarr;</a>
+                </div>
+
+                <div class="article-card" data-category="insights">
+                    <span class="article-tag">Insights</span>
+                    <h3>How We Approach Long-Term Client Success</h3>
+                    <div class="article-meta">
+                        <span>May 30, 2026</span>
+                        <span>7 min read</span>
+                    </div>
+                    <p>An inside look at the framework our team uses to measure and sustain results over time.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 4)">Read more &rarr;</a>
+                </div>
+
+                <div class="article-card" data-category="news">
+                    <span class="article-tag">News</span>
+                    <h3>Welcoming New Faces to Our Leadership Team</h3>
+                    <div class="article-meta">
+                        <span>May 12, 2026</span>
+                        <span>3 min read</span>
+                    </div>
+                    <p>Meet the newest additions to our leadership team and the experience they bring on board.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 5)">Read more &rarr;</a>
+                </div>
+
+                <div class="article-card" data-category="press">
+                    <span class="article-tag">Press</span>
+                    <h3>In the News: A Conversation on Industry Standards</h3>
+                    <div class="article-meta">
+                        <span>April 22, 2026</span>
+                        <span>4 min read</span>
+                    </div>
+                    <p>Our leadership joined a panel discussion on where industry standards are heading next.</p>
+                    <a href="#" class="read-more" onclick="openArticle(event, 6)">Read more &rarr;</a>
+                </div>
+
+            </div>
+
+            <a href="/contact" class="btn">Get in Touch</a>
+
+        </section>
+
+        <!-- Modal for Article Details -->
+        <div id="articleModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeArticle()">&times;</span>
+                <div class="article-detail">
+                    <span class="article-tag" id="modalTag"></span>
+                    <h2 id="modalTitle"></h2>
+                    <div class="article-meta">
+                        <span id="modalDate"></span>
+                    </div>
+                    <div id="modalBody" class="article-body"></div>
+                    <div class="modal-navigation">
+                        <button class="btn-prev" onclick="prevArticle()">← Previous</button>
+                        <button class="btn-next" onclick="nextArticle()">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+
+    <script>
+    // Article Database
+    const articles = [
+        {
+            id: 0,
+            title: "Expanding Our Global Footprint: What's Next for 2026",
+            category: "news",
+            date: "July 18, 2026",
+            content: "We are thrilled to announce that SMK DIGITALS has reached a major milestone in our global expansion strategy. Over the past year, we have successfully entered five new markets across Asia, Europe, and Africa, bringing our total presence to 35 countries worldwide.\n\nThis expansion represents not just a geographic milestone, but a fundamental shift in how we deliver value to our clients. Each region we enter comes with its own unique challenges and opportunities, which we approach with deep market research and local partnerships.\n\nOur expansion into Southeast Asia has been particularly noteworthy. In just eight months, we established regional offices in Singapore, Bangkok, and Jakarta. These hubs serve as command centers for our operations across the broader region, allowing us to provide 24/7 support to clients across different time zones.\n\nIn Europe, we strengthened our presence with new offices in Berlin and Amsterdam, complementing our existing operations in London and Paris. This network enables us to serve multinational corporations more effectively while respecting local regulatory requirements and business practices.\n\nThe African expansion is perhaps our most ambitious initiative. We recognized significant untapped potential in markets like Nigeria, Kenya, and South Africa. By partnering with local experts who understand the nuances of these markets, we are building sustainable, long-term operations rather than quick-hit ventures.\n\nWhat drives all of this expansion is our commitment to client success. We do not expand into new markets simply to increase our footprint. Rather, we expand because we see genuine opportunities to solve real problems for businesses in those regions.\n\nLooking ahead to the remainder of 2026, we plan to open three additional offices in Latin America and continue strengthening our presence in existing markets. We are also investing heavily in talent development, ensuring that our teams across all regions have access to world-class training and resources.\n\nThis journey would not be possible without the trust and support of our clients, partners, and our incredible global team. We are excited about what the future holds and invite you to be part of this growth story."
+        },
+        {
+            id: 1,
+            title: "Three Trends Reshaping the Industry This Year",
+            category: "insights",
+            date: "July 10, 2026",
+            content: "The digital landscape is evolving at an unprecedented pace. As we progress through 2026, three major trends are emerging that every organization should understand.\n\nTrend 1: AI-Driven Personalization\nArtificial intelligence is moving beyond chatbots and recommendation engines. Organizations are using AI to create deeply personalized customer experiences at scale. This means understanding not just what customers buy, but why they buy it, when they need it, and how to present it in ways that resonate with them individually.\n\nWhat this means for you: Organizations that invest in AI-powered personalization platforms are seeing conversion rate increases of 20-40%. However, this requires commitment to data quality and ethical AI practices.\n\nTrend 2: Privacy-First Marketing\nWith stricter regulations worldwide and consumers demanding more control over their data, marketing is being reimagined. Cookie-based tracking is becoming obsolete, forcing organizations to build first-party data strategies and earn customer trust through transparency.\n\nWhat this means for you: The competitive advantage now belongs to companies that can deliver results without invasive tracking. This requires rethinking analytics, attribution, and customer segmentation strategies.\n\nTrend 3: Sustainable Operations as a Differentiator\nSustainability is no longer just a corporate responsibility initiative. Customers actively choose brands aligned with their values. Organizations are discovering that sustainable operations also drive cost savings and attract top talent.\n\nWhat this means for you: Sustainability needs to be embedded in operations, not bolted on. From supply chain optimization to energy-efficient processes, organizations that make sustainability integral to their business model will lead their industries.\n\nThese trends are not separate—they intersect and amplify each other. The organizations thriving in 2026 are those that recognize these interconnections and adapt their strategies accordingly."
+        },
+        {
+            id: 2,
+            title: "We've Been Featured in Global Business Review",
+            category: "press",
+            date: "June 28, 2026",
+            content: "We are delighted to share that SMK DIGITALS was recently featured in Global Business Review, one of the leading publications for enterprise strategy and innovation.\n\nThe feature, titled \"Building Trust in a Digital-First World,\" highlights our approach to client partnerships and how we prioritize long-term relationships over quick wins.\n\nIn the interview, our CEO shared insights on:\n- How we measure success beyond traditional metrics\n- The importance of cultural alignment with clients\n- Our commitment to ethical business practices\n- The future of digital transformation\n\nOne key quote from the feature: \"In our experience, the most successful digital transformations are not about the technology—they are about the people and the processes. We partner with organizations that are ready to embrace change, and we guide them through it with expertise and empathy.\"\n\nThe publication also highlighted our work with several Fortune 500 companies, showcasing how we have helped them navigate complex digital challenges and emerge as industry leaders.\n\nThis recognition reinforces our commitment to thought leadership and our position as trusted advisors in the digital transformation space. We are grateful to Global Business Review for this opportunity to share our story."
+        },
+        {
+            id: 3,
+            title: "Announcing Our New Regional Partnership",
+            category: "news",
+            date: "June 15, 2026",
+            content: "We are excited to announce a strategic partnership with TechVision Asia, a leading technology consulting firm with deep expertise across Southeast Asian markets.\n\nThis partnership represents a significant step forward in our ability to serve multinational corporations and local enterprises operating in the region.\n\nWhat This Partnership Brings:\n- Enhanced local market expertise and cultural understanding\n- Accelerated go-to-market capabilities for our clients\n- Access to TechVision Asia's extensive network of enterprise clients\n- Combined resources to tackle larger, more complex digital transformation initiatives\n\nKey Benefits for Our Clients:\n1. Localized Solutions: Our solutions will now be adapted to local regulatory requirements and business practices.\n2. Extended Capabilities: We will combine TechVision Asia's consulting expertise with our proprietary technology platform.\n3. 24/7 Support: Combined teams enable round-the-clock support across all time zones.\n4. Faster Implementation: Local teams can begin work immediately without the ramp-up time of remote teams.\n\nThis partnership was carefully selected after extensive due diligence. TechVision Asia shares our commitment to client success, ethical business practices, and continuous innovation.\n\nWe are particularly excited about the opportunity to work together on several ongoing client projects and to open new doors for both organizations in this dynamic region.\n\nStay tuned for announcements about new service offerings and team members joining from TechVision Asia in the coming weeks."
+        },
+        {
+            id: 4,
+            title: "How We Approach Long-Term Client Success",
+            category: "insights",
+            date: "May 30, 2026",
+            content: "At SMK DIGITALS, we define success differently than many consulting firms. For us, success is not measured by the project handoff date, but by the sustained value our clients generate months and years after our engagement ends.\n\nOur Framework for Long-Term Success:\n\n1. Discovery & Alignment (Month 1-2)\nWe begin by deeply understanding your business, your challenges, and your vision. This is not a checkbox exercise—we spend time with your team, analyze your data, and understand your competitive landscape.\n\n2. Strategic Planning (Month 2-3)\nBased on our discovery, we develop a roadmap that aligns with your long-term business objectives. This roadmap includes clear milestones, success metrics, and contingency plans.\n\n3. Implementation with Enablement (Month 3-6)\nWhile implementing solutions, we simultaneously build internal capabilities. Your team learns alongside our team, ensuring sustainable knowledge transfer.\n\n4. Transition & Support (Month 6-9)\nWe gradually transition responsibility to your team while maintaining a safety net of support. This is critical—many projects fail here because organizations are not ready for independence.\n\n5. Continuous Optimization (Month 9+)\nWe establish ongoing optimization cycles where we regularly review performance, identify improvement opportunities, and help you stay ahead of market changes.\n\nWhat Sets Our Approach Apart:\n- Success Metrics: We define specific, measurable outcomes at the beginning and track them religiously.\n- Cultural Integration: Our team works embedded within your organization, not as external consultants.\n- Knowledge Transfer: We measure success by how much your team can do independently by project end.\n- Flexible Engagement: We adjust our approach based on learnings, not rigidly follow a predetermined plan.\n\nCase Study: One of our clients in the financial services industry engaged us for a digital transformation initiative. Eighteen months after project completion, they are independently managing and evolving the system, and have achieved 35% efficiency gains.\n\nThis is what success looks like to us."
+        },
+        {
+            id: 5,
+            title: "Welcoming New Faces to Our Leadership Team",
+            category: "news",
+            date: "May 12, 2026",
+            content: "We are thrilled to announce the addition of three exceptional leaders to our executive team:\n\nSarah Chen - Chief Technology Officer\nSarah brings 15 years of experience in enterprise software development and has led technical teams at two Fortune 500 companies. She is passionate about building scalable, ethical technology solutions and will oversee all product and engineering initiatives.\n\nDavid Okafor - Chief Operating Officer\nDavid previously served as VP of Operations at a leading global consulting firm. He brings deep expertise in scaling operations, optimizing processes, and building high-performance teams. He will focus on operational excellence and team development.\n\nMaria Rodriguez - Chief Strategy Officer\nMaria has spent the last decade in strategic roles at technology and management consulting firms. She brings a global perspective and deep expertise in market analysis, competitive positioning, and growth strategy.\n\nEach of these leaders was selected not just for their impressive résumés, but for their values alignment with our organization. They share our commitment to client success, continuous learning, and ethical business practices.\n\nWe are excited about the perspectives and experiences they bring to SMK DIGITALS. Join us in welcoming them!"
+        },
+        {
+            id: 6,
+            title: "In the News: A Conversation on Industry Standards",
+            category: "press",
+            date: "April 22, 2026",
+            content: "Our CEO was invited to participate in a panel discussion at the Global Tech Summit 2026, where industry leaders discussed the future of technology standards.\n\nThe panel addressed several critical topics:\n\n1. Interoperability and Open Standards\nAs organizations adopt multiple technologies, the ability for these systems to work together seamlessly is becoming critical. Industry standards ensure that vendor lock-in does not stifle innovation.\n\n2. Security Standards in a Distributed World\nWith remote work and distributed systems becoming the norm, traditional security standards are being tested. The panel discussed how standards need to evolve for cloud-native and edge computing environments.\n\n3. AI Ethics and Governance\nAs AI becomes more prevalent, the absence of universal standards creates risks. The panel emphasized the need for industry-wide standards that ensure AI systems are transparent, fair, and accountable.\n\n4. Environmental Sustainability Standards\nTechnology companies have a responsibility to minimize their environmental footprint. Industry standards can drive innovation in energy efficiency and sustainable practices.\n\nKey Takeaway from Our CEO:\n\"Standards are not constraints—they are enablers. When we agree on standards, we create a level playing field where the best solutions win, and where customers are protected.\"\n\nThe full discussion is available on the Global Tech Summit website."
+        }
+    ];
+
+    let currentArticleIndex = 0;
+
+    function filterArticles(category, btn) {
+        document.querySelectorAll('.media-filter-bar button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        document.querySelectorAll('.article-card').forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function openArticle(event, index) {
+        event.preventDefault();
+        currentArticleIndex = index;
+        const article = articles[index];
+
+        document.getElementById('modalTitle').textContent = article.title;
+        document.getElementById('modalTag').textContent = article.category.toUpperCase();
+        document.getElementById('modalTag').style.background = getCategoryColor(article.category);
+        document.getElementById('modalDate').textContent = article.date;
+        
+        document.getElementById('modalBody').innerHTML = article.content
+            .split('\n')
+            .map(p => p.trim() ? `<p>${p}</p>` : '')
+            .join('');
+
+        document.querySelector('.btn-prev').disabled = index === 0;
+        document.querySelector('.btn-next').disabled = index === articles.length - 1;
+
+        document.getElementById('articleModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeArticle() {
+        document.getElementById('articleModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function nextArticle() {
+        if (currentArticleIndex < articles.length - 1) {
+            openArticle({ preventDefault: () => {} }, currentArticleIndex + 1);
+        }
+    }
+
+    function prevArticle() {
+        if (currentArticleIndex > 0) {
+            openArticle({ preventDefault: () => {} }, currentArticleIndex - 1);
+        }
+    }
+
+    function getCategoryColor(category) {
+        const colors = {
+            news: 'rgba(255, 140, 0, 0.15)',
+            insights: 'rgba(100, 200, 255, 0.15)',
+            press: 'rgba(150, 100, 255, 0.15)'
+        };
+        return colors[category] || 'rgba(255, 140, 0, 0.15)';
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('articleModal');
+        if (event.target === modal) {
+            closeArticle();
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeArticle();
+        }
+    });
+    </script>
+</body>
+</html>

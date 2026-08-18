@@ -1,4 +1,4 @@
-const transporter = require("../config/emailConfig");
+const emailConfig = require("../config/emailConfig");
 
 exports.sendContactEmail = async (req, res) => {
     const { name, email, subject, message } = req.body;

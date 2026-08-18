@@ -3,7 +3,7 @@ dotenv.config(); // Load environment variables first
 
 const express = require("express");
 const path = require("path");
-const contactController = require("./Controllers/contactController");
+const contactController = require("./controllers/contactController");
 
 const app = express();
 const PORT = process.env.PORT || 3001;

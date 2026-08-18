@@ -1,115 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMK Digitals is a leading AI agency in South Africa. We build intelligent automation solutions, web development, and digital marketing services to scale your business. Get a free AI audit today.">
+    <meta name="keywords" content="AI agency South Africa, AI solutions, business automation, web development, digital marketing, AI Engineering, Software Development, AI integration, digital transformation, intelligent automation">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Canonical URL (important for SEO) -->
+    <link rel="canonical" href="https://smkdigitals.co.za/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smkdigitals.co.za/">
+    <meta property="og:title" content="AI Agency | Scale Your Business with Intelligent Automation">
+    <meta property="og:description" content="SMK Digitals builds AI solutions, automation, and digital services to transform your business. Free AI audit included.">
+    <meta property="og:image" content="https://smkdigitals.co.za/images/og-image.jpg">
+    
+    <!-- Twitter/X Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smkdigitals.co.za/">
+    <meta property="twitter:title" content="AI Agency | Scale Your Business with Intelligent Automation">
+    <meta property="twitter:description" content="SMK Digitals builds AI solutions, automation, and digital services to transform your business.">
+    <meta property="twitter:image" content="https://smkdigitals.co.za/images/twitter-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- JSON-LD Schema Markup (for Google to understand your business) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SMK Digitals",
+  "alternateName": "SMK DIGITALS (PTY) LTD",
+  "url": "https://smkdigitals.co.za",
+  "logo": "https://smkdigitals.co.za/images/company.png",
+  "description": "AI agency providing intelligent automation solutions, web development, Software development and digital marketing services",
+  "sameAs": [
+    "https://www.facebook.com/smkdigitals",
+    "https://www.linkedin.com/company/smk-digitals",
+    "https://www.instagram.com/smkdigitals",
+    "https://twitter.com/smkdigitals"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1202 MK Street, Chloorkop",
+    "addressLocality": "EDENVALE",
+    "addressRegion": "Gauteng",
+    "postalCode": "1619",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+27659227155",
+    "email": "info@smkdigitals.co.za"
+  },
+  "foundingDate": "2024",
+  "areaServed": ["ZA", "South Africa"]
+}
+</script>
+
+<!-- Business Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SMK Digitals",
+  "image": "https://smkdigitals.co.za/images/company.png",
+  "description": "Think of us as your technology partner. We understand your business challenges and create AI-powered solutions tailored to fix them. Whether it's automation, web and software development, or digital marketing, we're invested in your success.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1202 MK Street, Chloorkop",
+    "addressLocality": "EDENVALE",
+    "addressRegion": "Gauteng",
+    "postalCode": "1619",
+    "addressCountry": "ZA"
+  },
+  "telephone": "+27659227155",
+  "url": "https://smkdigitals.co.za",
+  "priceRange": "$$$",
+  "serviceArea": {
+    "@type": "City",
+    "name": "Johannesburg"
+  }
+}
+</script>
+
+<!-- FAQPage Schema (great for featured snippets) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI integration for businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI integration involves implementing artificial intelligence and machine learning solutions into your existing business workflows to automate tasks, reduce costs, and improve decision-making. SMK Digitals specializes in custom AI solutions tailored to your specific business needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can AI help my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI can help your business by automating repetitive tasks, improving customer service through chatbots, predicting market trends, optimizing operations, and freeing your team to focus on strategic work. Our free AI audit reveals exactly where AI can create the most impact in your organization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does SMK Digitals offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SMK Digitals offers AI integration, web development, digital marketing, UI/UX design, cloud solutions, and cybersecurity services. All services are tailored to help businesses scale and succeed in the digital age."
+      }
+    }
+  ]
+}
+</script>
+
+
     <%- include('partials/head') %>
+    
+    <!-- Title Tag (CRITICAL for SEO - should be 50-60 characters) -->
+    <title>AI Agency South Africa | Business Automation & AI Engineering | SMK Digitals</title>
 </head>
 <body>
     <%- include('partials/navbar', { active: active }) %>
 
     <main>
-        <section id="hero">
+        <!-- HERO SECTION: Optimized for main keywords -->
+        <section id="hero" itemscope itemtype="https://schema.org/Service">
             <div class="hero-text">
-                <h2>Scale Your Business with AI</h2>
-                <p>We build intelligent systems that automate workflows, reduce costs, and free your team to focus on what matters most.</p>
-                <p>Get a free AI audit and receive a personalized roadmap showing exactly where AI can create the greatest impact in your business.</p>
-                <a href="/contact" class="btn">Get Your Free AI Audit</a>
-
-               
+                <h1>AI Agency Solutions That Scale Your Business</h1>
+                <p>We build intelligent automation systems that reduce costs, streamline workflows, and free your team to focus on strategic growth. As a leading AI integration company in South Africa, we combine cutting-edge technology with real business expertise.</p>
+                <p>Get a <strong>free AI audit</strong> and receive a personalized roadmap showing exactly where AI can create the greatest impact in your business operations.</p>
+                <a href="/contact" class="btn" itemscope itemtype="https://schema.org/Action">
+                    <span itemprop="name">Get Your Free AI Audit</span>
+                </a>
+                
+                <!-- Hidden content for SEO (provides context without cluttering design) -->
+                <meta itemprop="name" content="AI Integration Services">
+                <meta itemprop="description" content="Custom AI solutions for business automation and digital transformation">
+            </div>
         </section>
+
+        <!-- ABOUT SECTION: Trust & Authority Signals -->
         <section id="about">
-            <h2>About Us</h2>
-            <p>SMK DIGITALS (PTY) LTD is a digital solutions company built on a simple belief: every business deserves a strong, reliable online presence. We combine technical expertise with a genuine understanding of our clients' goals to deliver work that actually moves the needle.</p>
-            <p>Our team brings together developers, designers, and strategists who collaborate closely on every project — from small business websites to full-scale digital transformations. We pride ourselves on clear communication, honest timelines, and support that doesn't disappear after launch.</p>
-            <p>Whether you're a startup taking your first steps online or an established business looking to modernize, we tailor our approach to fit where you are and where you're headed.</p>
-            <a href="/faq" class="btn">Get to Know Us</a>
+            <h2>About : Your AI Solutions Partner</h2>
+            <p><strong>SMK Digitals (PTY) LTD</strong> is a South African digital solutions company specializing in <strong>AI integration</strong>, <strong>business automation</strong>, and digital transformation. We're built on a simple belief, every business deserves a strong, intelligent online presence powered by technology that actually works.</p>
+            <p>Our team of developers, designers, AI specialists, and strategists collaborates closely on every project from implementing AI chatbots for startups to building enterprise scale automation systems for established organizations. We pride ourselves on clear communication, realistic timelines, and support that doesn't disappear after launch.</p>
+            <p>Whether you're a startup taking your first steps into AI or an established enterprise looking to automate complex workflows, we tailor our approach to fit where you are and where you're headed.</p>
+            <a href="/faq" class="btn">Learn More About Our Approach</a>
         </section>
 
+        <!-- MISSION & VISION: Strategic Keywords -->
         <section id="mission-vision">
-            <h2>Mission &amp; Vision</h2>
+            <h2>Our Mission & Vision in Digital Transformation</h2>
 
-            <div class="service-item">
+            <div class="service-item" itemscope itemtype="https://schema.org/Thing">
                 <h3>🎯 Our Mission</h3>
-                <p>To empower businesses of every size with digital solutions that are reliable, accessible, and built to grow with them — delivered through honest partnership rather than one-off transactions.</p>
+                <p itemprop="description">To empower businesses of every size with intelligent, accessible digital solutions,including AI integration, automation, and and digital innovation through honest partnership rather than one-off transactions. We believe technology should work for you, not the other way around.</p>
             </div>
 
-            <div class="service-item">
+            <div class="service-item" itemscope itemtype="https://schema.org/Thing">
                 <h3>🚀 Our Vision</h3>
-                <p>To be a leading digital partner for businesses across South Africa and beyond, known for turning ambitious ideas into dependable, high-performing digital products.</p>
+                <p itemprop="description">To be the leading AI and digital solutions partner for businesses across South Africa and beyond. known for transforming ambitious ideas into dependable, high-performing digital products that drive real business results.</p>
             </div>
         </section>
 
+        <!-- SERVICES SECTION: Major keyword targeting -->
         <section id="core-solutions">
-            <h2>Our Core Solutions</h2>
-            <p>We focus on four core areas that give businesses the strongest digital foundation:</p>
+            <h2>Our AI & Digital Solutions for Business Growth</h2>
+            <p>We focus on six core service areas that give businesses the strongest digital foundation and competitive advantage in today's market:</p>
 
-            <div class="flip-box">
+            <!-- Service 1: Business Process Automation -->
+            <div class="flip-box" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="Business Process Automation">
+                <meta itemprop="description" content="Software that automates repetitive, manual business tasks">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>🌐 Web Development</h3>
+                        <h3>🔄⚙️ Business Process Automation</h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>Custom, responsive websites and applications built to perform and built to last.</p>
+                        <p>softwares that automates repetitive, manual business tasks.It's a digital worker that handles routine operations 24/7 with perfect accuracy, eliminating human error and freeing your team to focus on higher value work.</p>
+                        <a href="/services/web-development" title="Learn more about our web development services">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="flip-box">
+            <!-- Service 2: AI chatbots and WhatsApp Business Automation -->
+            <div class="flip-box" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="AI Chatbots & WhatsApp Business Automation">
+                <meta itemprop="description" content="Transform customer engagement with AI-powered Chatbots and WhatsApp automation that handles inquiries, processes orders, and qualifies leads 24/7 on the platform 96% of South Africans use daily.">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>📱 Digital Marketing</h3>
+                        <h3>📱💬 AI Chatbots & WhatsApp Business Automation </h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>SEO and targeted campaigns that put your business in front of the right audience.</p>
+                        <p>Our intelligent chatbots reduce support costs, improve response times, and capture sales while your team focuses on complex issues. From appointment booking to customer service to order tracking automation that actually works.</p>
+                        <a href="/services/AI Chatbots And WhatsApp Automation" title="Learn more about our AI chatbot services">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="flip-box">
+            <!-- Service 3: AI Customer Service Solutions -->
+            <div class="flip-box" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="AI Customer Service Solutions">
+                <meta itemprop="description" content="Intelligent customer service solutions powered by AI">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>🎨 UI/UX Design</h3>
+                        <h3>👥☎️ AI Customer Service Solutions</h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>Interfaces that are as intuitive to use as they are attractive to look at.</p>
+                        <p>Round the-clock customer support powered by AI. Handle routine queries instantly, escalate complex issues to your team, cut support costs by 40-60%.</p>
+                        <a href="/services/ai-customer-service" title="Learn more about our AI customer service solutions">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="flip-box">
+            <!-- Service 4: Industry-Specific AI -->
+            <div class="flip-box" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="Industry-Specific AI">
+                <meta itemprop="description" content="Custom AI solutions tailored to your industry's unique challenges">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>☁️ Cloud Solutions</h3>
+                        <h3>🎯🔧 Industry-Specific AI</h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>Secure, scalable infrastructure that grows alongside your business.</p>
+                        <p>Custom AI built for your business. Healthcare. Retail. Finance. Agriculture etc. Solutions tailored to your unique challenges and goals.</p>
+                        <a href="/services/industry-specific-ai" title="Learn more about our industry-specific AI solutions">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="flip-box">
+            <!-- Service 5: AI Email Marketing Automation & Lead Generation -->
+            <div class="flip-box featured" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="AI Email Marketing Automation & Lead Generation">
+                <meta itemprop="description" content="Custom AI solutions for automated email marketing and lead generation">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>🤖 AI Integration</h3>
+                        <h3>📧📈 AI Email Marketing Automation & Lead Generation</h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>Intelligent automation and machine learning solutions tailored to your workflow.</p>
+                        <p>AI Email Marketing Automation & Lead Generation an intelligent software that automates your email marketing and sales follow-up process. It sends personalized emails automatically based on customer behavior, identifies your most promising leads, and nurtures them toward a sale without requiring manual effort from your team.</p>
+                        <a href="/services/ai-integration" title="Learn more about our AI solutions">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="flip-box">
+            <!-- Service 6: AI Knowledge Base Systems -->
+            <div class="flip-box" itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="name" content="AI Knowledge Base Systems">
+                <meta itemprop="description" content="Intelligent knowledge management solutions powered by AI">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h3>🔒 Cybersecurity</h3>
+                        <h3>📚🧠 AI Knowledge Base Systems</h3>
                     </div>
                     <div class="flip-box-back">
-                        <p>Comprehensive protection and compliance to keep your data safe and secure.</p>
+                        <p>AI Knowledge Base is like a smart library of all your company information. It stores FAQs, howto guides, policies, and product details. When a customer or employee asks a question, the AI instantly finds the right answer without anyone having to search or think about it.</p>
+                        <a href="/services/ai-knowledge-base" title="Learn more about our AI knowledge base solutions">View Details →</a>
                     </div>
                 </div>
             </div>
 
-            <a href="/services" class="btn">See All Our Services</a>
+            <a href="/services" class="btn">Explore All Our Services</a>
         </section>
+
     </main>
 
     <%- include('partials/footer') %>

@@ -1,10 +1,11 @@
 {
   "name": "company-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Company website",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "mongoose": "^9.7.4",
-    "nodemailer": "^9.0.3",
+    "nodemailer": "^9.0.5",
     "three": "^0.185.1"
   },
   "devDependencies": {

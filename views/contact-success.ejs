@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/navbar', { active: active }) %>
+
+    <main>
+        <section id="success" class="success-section">
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h2>Message Sent Successfully!</h2>
+                <p>Thank you, <strong><%= name %></strong>! Your message has been sent.</p>
+                <p>We'll get back to you within 24 hours</p>
+                <a href="/" class="btn-home">Return to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+</body>
+</html>

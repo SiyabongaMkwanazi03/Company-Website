@@ -10,6 +10,9 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+console.log("SMTP HOST: smtpout.secureserver.net");
+console.log("SMTP USER:", process.env.SMTP_EMAIL);
+
 transporter.verify((error, success) => {
     if (error) {
         console.log("SMTP CONFIG ERROR:", error);

@@ -3,9 +3,8 @@ const emailConfig = require("../config/emailConfig");
 exports.sendContactEmail = async (req, res) => {
     const { name, email, subject, message } = req.body;
 
-    // Validation
     if (!name || !email || !subject || !message) {
-        return res.render("contact", { 
+        return res.render("contact", {
             active: "contact",
             pageTitle: "Contact - SMK DIGITALS",
             error: "All fields are required"
@@ -13,7 +12,6 @@ exports.sendContactEmail = async (req, res) => {
     }
 
     try {
-        // Email to business
         const mailOptions = {
             from: process.env.SMTP_EMAIL,
             to: process.env.RECIPIENT_EMAIL,
@@ -27,7 +25,6 @@ exports.sendContactEmail = async (req, res) => {
             `,
         };
 
-        // Confirmation email to user
         const confirmationEmail = {
             from: process.env.SMTP_EMAIL,
             to: email,
@@ -42,17 +39,18 @@ exports.sendContactEmail = async (req, res) => {
             `,
         };
 
-        // Send both emails
-        await transporter.sendMail(mailOptions);
-        await transporter.sendMail(confirmationEmail);
+        await emailConfig.sendMail(mailOptions);
+        await emailConfig.sendMail(confirmationEmail);
 
         res.render("contact-success", {
             active: "contact",
             pageTitle: "Message Sent - SMK DIGITALS",
             name: name,
         });
+
     } catch (error) {
         console.error("Email error:", error);
+
         res.render("contact", {
             active: "contact",
             pageTitle: "Contact - SMK DIGITALS",

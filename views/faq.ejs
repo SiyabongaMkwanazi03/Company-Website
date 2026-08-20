@@ -1,96 +1,257 @@
-
-
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('partials/head') %>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can AI help my business operate with a small team?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Automation can handle many repetitive tasks without requiring additional staff."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How quickly can SMEs benefit from AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simple AI solutions can start delivering benefits within days or weeks, depending on the implementation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI connect different business systems?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. AI automation can connect tools such as CRMs, websites, email, and messaging platforms."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is AI going to help small and medium businesses make better decisions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI can analyse business data and identify patterns that can support better decisions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is AI automation for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI automation is particularly useful for service businesses that have many repetitive tasks and may lose leads due to slow follow-up."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can a business start using AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start with one simple problem, such as customer support, marketing, or repetitive administrative work."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
+
 <body>
+
     <%- include('partials/navbar', { active: active }) %>
 
     <main>
+
         <section id="how-it-works">
+
             <h2>How It Works</h2>
-            <p>We guide you through every step of the process to achieve measurable results.</p>
+
+            <p>
+                We guide you through every step of the process
+                to achieve measurable results.
+            </p>
 
             <div class="flip-boxes-container">
+
                 <div class="flip-box">
                     <div class="flip-box-inner">
+
                         <div class="flip-box-front">
                             <h3>Step 1</h3>
                         </div>
+
                         <div class="flip-box-back">
                             <h3>Discovery & Strategy</h3>
-                            <p>We start with your business, not the technology. A discovery call and stakeholder conversations surface where the hours actually go, then we prioritize what is worth automating.</p>
+
+                            <p>
+                                We start with your business, not the technology.
+                                A discovery call and stakeholder conversations
+                                surface where the hours actually go, then we
+                                prioritize what is worth automating.
+                            </p>
                         </div>
+
                     </div>
                 </div>
 
                 <div class="flip-box">
                     <div class="flip-box-inner">
+
                         <div class="flip-box-front">
                             <h3>Step 2</h3>
                         </div>
+
                         <div class="flip-box-back">
                             <h3>Implementation</h3>
-                            <p>We design and build custom solutions for your specific workflows, on your systems, with your data that will solve your business problems.</p>
+
+                            <p>
+                                We design and build custom solutions for your
+                                specific workflows, on your systems, with your
+                                data that will solve your business problems.
+                            </p>
                         </div>
+
                     </div>
                 </div>
 
                 <div class="flip-box">
                     <div class="flip-box-inner">
+
                         <div class="flip-box-front">
                             <h3>Step 3</h3>
                         </div>
+
                         <div class="flip-box-back">
                             <h3>Scale & Optimize</h3>
-                            <p>We launch, document, and stay available for maintenance. Automation is a system that evolves with your business</p>
+
+                            <p>
+                                We launch, document, and stay available for
+                                maintenance. Automation is a system that
+                                evolves with your business.
+                            </p>
                         </div>
+
                     </div>
                 </div>
+
             </div>
+
         </section>
 
         <section id="FAQ">
+
             <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions about our services and processes.</p>
+
+            <p>
+                Find answers to common questions about our services and processes.
+            </p>
 
             <div class="faq-item">
-                <h3>Can AI help my business operate with a small team? <span>▼</span></h3>
-                <p class="answer">Yes. Automation can handle many repetitive tasks without requiring additional staff.</p>
+
+                <h3>
+                    Can AI help my business operate with a small team?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    Yes. Automation can handle many repetitive tasks
+                    without requiring additional staff.
+                </p>
+
             </div>
 
             <div class="faq-item">
-                <h3>How quickly can the SMEs benefit from AI?<span>▼</span></h3>
-                <p class="answer">Simple AI solutions can start delivering benefits within days or weeks, depending on the implementation</p>
+
+                <h3>
+                    How quickly can SMEs benefit from AI?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    Simple AI solutions can start delivering benefits
+                    within days or weeks, depending on the implementation.
+                </p>
+
             </div>
 
             <div class="faq-item">
-                <h3>Can AI connect different business systems?<span>▼</span></h3>
-                <p class="answer">Yes. AI automation can connect tools such as CRMs, websites, email, and messaging platforms.</p>
+
+                <h3>
+                    Can AI connect different business systems?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    Yes. AI automation can connect tools such as CRMs,
+                    websites, email, and messaging platforms.
+                </p>
+
             </div>
 
             <div class="faq-item">
-                <h3>How is AI going to help Small And Medium businesses make better decisions?<span>▼</span></h3>
-                <p class="answer">AI can analyse business data and identify patterns that can support better decisions.</p>
+
+                <h3>
+                    How is AI going to help small and medium businesses
+                    make better decisions?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    AI can analyse business data and identify patterns
+                    that can support better decisions.
+                </p>
+
             </div>
 
             <div class="faq-item">
-                <h3>Who is it for?<span>▼</span></h3>
-                <p class="answer"> Service Businesses that have many repetitive tasks and lose leads due to slow follow up.</p>
+
+                <h3>
+                    Who is AI automation for?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    AI automation is particularly useful for service
+                    businesses that have many repetitive tasks and may
+                    lose leads due to slow follow-up.
+                </p>
+
             </div>
 
             <div class="faq-item">
-                <h3>How can a business start using AI? <span>▼</span></h3>
-                <p class="answer">Start with one simple problem, such as customer support, marketing, or repetitive admin work.</p>
+
+                <h3>
+                    How can a business start using AI?
+                    <span>▼</span>
+                </h3>
+
+                <p class="answer">
+                    Start with one simple problem, such as customer support,
+                    marketing, or repetitive administrative work.
+                </p>
+
             </div>
 
-            <a href="/contact" class="btn">Still have questions? Contact us!</a>
+            <a href="/contact" class="btn">
+                Still have questions? Contact us!
+            </a>
+
         </section>
+
     </main>
 
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>
+
 </body>
+
 </html>
+```

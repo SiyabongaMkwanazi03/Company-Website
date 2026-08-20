@@ -1,5 +1,5 @@
 ﻿const dotenv = require("dotenv");
-dotenv.config(); // Load environment variables first
+dotenv.config();
 
 const express = require("express");
 const path = require("path");
@@ -10,13 +10,25 @@ const PORT = process.env.PORT || 3001;
 
 // View engine
 app.set("view engine", "ejs");
-app.use(express.static("public"));
 
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
 
 // Form data
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Sitemap
+app.get("/sitemap.xml", (req, res) => {
+    res.type("application/xml");
+    res.sendFile(path.join(__dirname, "public", "sitemap.xml"));
+});
+
+// Robots.txt
+app.get("/robots.txt", (req, res) => {
+    res.type("text/plain");
+    res.sendFile(path.join(__dirname, "public", "robots.txt"));
+});
 
 // Routes
 app.get("/", (req, res) => {

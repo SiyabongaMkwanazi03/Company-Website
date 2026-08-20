@@ -3,13 +3,14 @@ dotenv.config(); // Load environment variables first
 
 const express = require("express");
 const path = require("path");
-const contactController = require("./controllers/contactController");
+const contactController = require("./controllers/contactController.js");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // View engine
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 // Static files
 app.use(express.static(path.join(__dirname, "public")));

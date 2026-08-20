@@ -1,4 +1,5 @@
-﻿const dotenv = require("dotenv");
+﻿
+const dotenv = require("dotenv");
 dotenv.config();
 
 const express = require("express");
@@ -30,39 +31,58 @@ app.get("/robots.txt", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "robots.txt"));
 });
 
-// Routes
+// Home
 app.get("/", (req, res) => {
     res.render("index", {
         active: "home",
-        pageTitle: "Home - SMK DIGITALS"
+        pageTitle: "AI Automation for SMEs in South Africa | SMK DIGITALS",
+        pageDescription:
+            "SMK DIGITALS provides AI automation solutions that help South African small and medium businesses improve efficiency, generate leads and grow.",
+        canonicalPath: "/"
     });
 });
 
+// Services
 app.get("/services", (req, res) => {
     res.render("services", {
         active: "services",
-        pageTitle: "Services - SMK DIGITALS"
+        pageTitle: "AI Automation Services for Businesses | SMK DIGITALS",
+        pageDescription:
+            "Explore AI automation, AI chatbots, business process automation and AI solutions designed to help SMEs improve efficiency and grow.",
+        canonicalPath: "/services"
     });
 });
 
+// FAQ
 app.get("/faq", (req, res) => {
     res.render("faq", {
         active: "faq",
-        pageTitle: "FAQ - SMK DIGITALS"
+        pageTitle: "AI Automation FAQ | SMK DIGITALS",
+        pageDescription:
+            "Find answers to common questions about AI automation, AI chatbots and AI solutions for small and medium businesses.",
+        canonicalPath: "/faq"
     });
 });
 
+// Contact
 app.get("/contact", (req, res) => {
     res.render("contact", {
         active: "contact",
-        pageTitle: "Contact - SMK DIGITALS"
+        pageTitle: "Contact SMK DIGITALS | AI Automation Solutions",
+        pageDescription:
+            "Contact SMK DIGITALS to discuss AI automation, chatbots and business solutions for your company.",
+        canonicalPath: "/contact"
     });
 });
 
+// Media Hub
 app.get("/media-hub", (req, res) => {
     res.render("media-hub", {
         active: "media-hub",
-        pageTitle: "Media Hub - SMK DIGITALS"
+        pageTitle: "AI Business Insights & Resources | SMK DIGITALS",
+        pageDescription:
+            "Explore AI insights, business tips and resources designed to help SMEs use artificial intelligence effectively.",
+        canonicalPath: "/media-hub"
     });
 });
 
@@ -73,3 +93,4 @@ app.post("/contact", contactController.sendContactEmail);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+

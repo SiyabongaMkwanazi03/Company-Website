@@ -1,5 +1,108 @@
-﻿<meta charset="UTF-8">
+﻿
+<meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><%= locals.pageTitle || 'SMK DIGITALS' %></title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="/css/style.css">
+
+<!-- SEO Title -->
+<title><%= locals.pageTitle || "SMK DIGITALS | AI Solutions & Automation for SMEs" %></title>
+
+<!-- SEO Description -->
+<meta
+    name="description"
+    content="<%= locals.pageDescription || 'SMK DIGITALS provides AI automation and business solutions for small and medium businesses in South Africa.' %>"
+>
+
+<!-- Search Engine Instructions -->
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link
+    rel="canonical"
+    href="https://smkdigitals.co.za<%= locals.canonicalPath || '/' %>"
+>
+
+<link rel="icon" type="image/png" href="/images/company.png">
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+
+<meta
+    property="og:title"
+    content="<%= locals.pageTitle || 'SMK DIGITALS | AI Solutions & Automation for SMEs' %>"
+>
+
+<meta
+    property="og:description"
+    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
+>
+
+<meta
+    property="og:url"
+    content="https://smkdigitals.co.za<%= locals.canonicalPath || '/' %>"
+>
+
+<meta
+    property="og:site_name"
+    content="SMK DIGITALS"
+>
+
+<!-- Twitter / X -->
+<meta
+    name="twitter:card"
+    content="summary_large_image"
+>
+
+<meta
+    name="twitter:title"
+    content="<%= locals.pageTitle || 'SMK DIGITALS | AI Solutions & Automation for SMEs' %>"
+>
+
+<meta
+    name="twitter:description"
+    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
+>
+
+<!-- Theme -->
+<meta
+    name="theme-color"
+    content="#000000"
+>
+
+<!-- Favicon -->
+<link
+    rel="icon"
+    type="image/png"
+    href="/images/favicon.png"
+>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
+
+<!-- Main stylesheet -->
+<link
+    rel="stylesheet"
+    href="/css/style.css"
+>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SMK DIGITALS",
+    "url": "https://smkdigitals.co.za/",
+     "logo": "https://smkdigitals.co.za/images/company.png",
+    "description": "SMK DIGITALS provides AI automation, AI chatbots, business process automation and AI solutions for small and medium businesses.",
+    "email": "info@smkdigitals.co.za",
+    "telephone": "+27659227155",
+    "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+    }
+}
+</script>
+

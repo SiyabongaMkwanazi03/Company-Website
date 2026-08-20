@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,9 @@
                         <div class="info-icon">&#9993;</div>
                         <div class="info-content">
                             <h3>Email</h3>
-                            <a href="mailto:info@smkdigitals.co.za">info@smkdigitals.co.za</a>
+                            <a href="mailto:info@smkdigitals.co.za">
+                                info@smkdigitals.co.za
+                            </a>
                         </div>
                     </div>
 
@@ -55,28 +58,54 @@
 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="/contact" method="POST">
+
+                    <form id="contactForm">
+
                         <div class="input-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
                         </div>
 
                         <div class="input-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                            >
                         </div>
 
                         <div class="input-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What's this about?"
+                                required
+                            >
                         </div>
 
                         <div class="input-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell us a bit more..." required></textarea>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell us a bit more..."
+                                required
+                            ></textarea>
                         </div>
 
                         <button type="submit">Send Message</button>
+
                     </form>
                 </div>
 
@@ -86,5 +115,39 @@
 
     <%- include('partials/footer') %>
     <%- include('partials/scripts') %>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const recipient = "info@smkdigitals.co.za";
+
+            const emailSubject = encodeURIComponent(subject);
+
+            const emailBody = encodeURIComponent(
+                `Hello SMK DIGITALS,
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+-------------------------
+Sent from the >SMK Digitals (PTY) LTD Website
+`
+            );
+
+            window.location.href =
+                `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
+        });
+    </script>
+
 </body>
 </html>
+```

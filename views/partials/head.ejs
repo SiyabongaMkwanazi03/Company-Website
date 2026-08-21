@@ -3,30 +3,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Title -->
+<!-- SEO -->
 <title><%= locals.pageTitle || "SMK DIGITALS | AI Solutions & Automation for SMEs" %></title>
 
-<!-- SEO Description -->
 <meta
     name="description"
-    content="<%= locals.pageDescription || 'SMK DIGITALS provides AI automation and business solutions for small and medium businesses in South Africa.' %>"
+    content="SMK DIGITALS provides AI automation, AI chatbots, business process automation and AI solutions designed to help small and medium businesses grow and operate more efficiently."
 >
 
-<!-- Search Engine Instructions -->
-<meta name="robots" content="index, follow">
+<meta
+    name="robots"
+    content="index, follow"
+>
 
-<!-- Canonical URL -->
 <link
     rel="canonical"
     href="https://smkdigitals.co.za<%= locals.canonicalPath || '/' %>"
 >
 
-<a href="/">
-    <img src="/images/company.png" alt="SMK DIGITALS Logo">
-</a>
-
-
-<!-- Open Graph -->
+<!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="website">
 
 <meta
@@ -36,7 +31,7 @@
 
 <meta
     property="og:description"
-    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
+    content="AI automation and business solutions helping SMEs improve efficiency, generate leads and grow."
 >
 
 <meta
@@ -49,11 +44,13 @@
     content="SMK DIGITALS"
 >
 
-<!-- Twitter / X -->
 <meta
-    name="twitter:card"
-    content="summary_large_image"
+    property="og:image"
+    content="https://smkdigitals.co.za/images/og-image.jpg"
 >
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
 
 <meta
     name="twitter:title"
@@ -62,14 +59,16 @@
 
 <meta
     name="twitter:description"
-    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
+    content="AI automation and business solutions helping SMEs improve efficiency, generate leads and grow."
+>
+
+<meta
+    name="twitter:image"
+    content="https://smkdigitals.co.za/images/og-image.jpg"
 >
 
 <!-- Theme -->
-<meta
-    name="theme-color"
-    content="#000000"
->
+<meta name="theme-color" content="#000000">
 
 <!-- Favicon -->
 <link
@@ -90,21 +89,32 @@
     href="/css/style.css"
 >
 
-<!-- Structured Data -->
+<!-- Structured Data / Schema.org -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "SMK DIGITALS",
     "url": "https://smkdigitals.co.za/",
-    "logo": "https://smkdigitals.co.za/images/company.png",
+    "logo": "https://smkdigitals.co.za/images/logo.png",
     "description": "SMK DIGITALS provides AI automation, AI chatbots, business process automation and AI solutions for small and medium businesses.",
     "email": "info@smkdigitals.co.za",
     "telephone": "+27659227155",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1202 MK Street CHLOORKOP EXT 51",
+        "addressLocality": "Johannesburg",
+        "addressCountry": "ZA"
+    },
     "areaServed": {
         "@type": "Country",
         "name": "South Africa"
-    }
+    },
+    "sameAs": [
+        "https://www.instagram.com/",
+        "https://www.facebook.com/",
+        "https://www.linkedin.com/"
+    ]
 }
 </script>
 

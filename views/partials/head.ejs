@@ -1,4 +1,3 @@
-﻿
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,7 @@
 
 <meta
     name="description"
-    content="SMK DIGITALS provides AI automation, AI chatbots, business process automation and AI solutions designed to help small and medium businesses grow and operate more efficiently."
+    content="<%= locals.pageDescription || 'SMK DIGITALS provides AI automation, AI chatbots, business process automation and AI solutions designed to help small and medium businesses grow and operate more efficiently.' %>"
 >
 
 <meta
@@ -31,7 +30,7 @@
 
 <meta
     property="og:description"
-    content="AI automation and business solutions helping SMEs improve efficiency, generate leads and grow."
+    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
 >
 
 <meta
@@ -50,7 +49,10 @@
 >
 
 <!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image">
+<meta
+    name="twitter:card"
+    content="summary_large_image"
+>
 
 <meta
     name="twitter:title"
@@ -59,7 +61,7 @@
 
 <meta
     name="twitter:description"
-    content="AI automation and business solutions helping SMEs improve efficiency, generate leads and grow."
+    content="<%= locals.pageDescription || 'AI automation and business solutions helping SMEs improve efficiency, generate leads and grow.' %>"
 >
 
 <meta
@@ -117,4 +119,3 @@
     ]
 }
 </script>
-

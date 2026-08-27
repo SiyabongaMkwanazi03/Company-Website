@@ -1,217 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Primary Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="SMK Digitals is a South African AI Governance, Risk & Compliance (AI GRC) company helping organisations manage AI governance, identify technology risks, strengthen compliance readiness, and adopt AI responsibly.">
-
-    <meta name="keywords" content="AI Governance South Africa, AI GRC South Africa, AI Risk Management, AI Compliance, Responsible AI, AI Governance Services, AI Risk Assessment, AI Compliance Readiness, AI Governance Framework, AI Vendor Risk, AI Governance Consulting">
-
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://smkdigitals.co.za/">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smkdigitals.co.za/">
-    <meta property="og:title" content="AI Governance, Risk & Compliance | SMK Digitals">
-    <meta property="og:description" content="SMK Digitals helps organisations govern AI responsibly, manage AI-related risks, strengthen compliance readiness, and build trust in emerging technology.">
-    <meta property="og:image" content="https://smkdigitals.co.za/images/og-image.jpg">
-
-    <!-- Twitter/X Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://smkdigitals.co.za/">
-    <meta property="twitter:title" content="AI Governance, Risk & Compliance | SMK Digitals">
-    <meta property="twitter:description" content="Helping organisations manage AI governance, risk, compliance, and responsible technology adoption.">
-    <meta property="twitter:image" content="https://smkdigitals.co.za/images/twitter-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SMK Digitals",
-      "alternateName": "SMK DIGITALS (PTY) LTD",
-      "url": "https://smkdigitals.co.za",
-      "logo": "https://smkdigitals.co.za/images/company.png",
-      "description": "South African AI Governance, Risk & Compliance (AI GRC) company helping organisations manage AI governance, assess AI-related risks, strengthen compliance readiness, and adopt artificial intelligence responsibly.",
-      "sameAs": [
-        "https://www.facebook.com/smkdigitals",
-        "https://www.linkedin.com/company/smk-digitals",
-        "https://www.instagram.com/smk_digitals",
-        "https://twitter.com/smkdigitals"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1202 MK Street, Chloorkop",
-        "addressLocality": "EDENVALE",
-        "addressRegion": "Gauteng",
-        "postalCode": "1619",
-        "addressCountry": "ZA"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "telephone": "+27659227155",
-        "email": "info@smkdigitals.co.za"
-      },
-      "foundingDate": "2024",
-      "areaServed": [
-        "ZA",
-        "South Africa"
-      ]
-    }
-    </script>
-
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "SMK Digitals",
-      "image": "https://smkdigitals.co.za/images/company.png",
-      "description": "SMK Digitals provides AI Governance, Risk & Compliance services to help organisations identify AI-related risks, establish governance frameworks, strengthen compliance readiness, assess AI vendors, and adopt artificial intelligence responsibly.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1202 MK Street, Chloorkop",
-        "addressLocality": "EDENVALE",
-        "addressRegion": "Gauteng",
-        "postalCode": "1619",
-        "addressCountry": "ZA"
-      },
-      "telephone": "+27659227155",
-      "url": "https://smkdigitals.co.za",
-      "priceRange": "$$$",
-      "serviceArea": {
-        "@type": "Country",
-        "name": "South Africa"
-      }
-    }
-    </script>
-
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is AI Governance, Risk & Compliance (AI GRC)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AI Governance, Risk & Compliance (AI GRC) is the practice of establishing governance, identifying and managing AI-related risks, and helping organisations meet applicable legal, regulatory, industry, and internal requirements when using artificial intelligence."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can AI governance benefit my organisation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AI governance helps organisations understand how AI is being used, identify potential risks, establish accountability, improve oversight, strengthen internal policies and controls, and support responsible adoption of artificial intelligence."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What services does SMK Digitals offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SMK Digitals provides AI Governance Assessments, AI Risk Assessment and Management, AI Governance Frameworks and Policies, AI Compliance and Regulatory Readiness, AI Vendor and Third-Party Risk Assessments, and Ongoing AI Governance and Monitoring."
-          }
-        }
-      ]
-    }
-    </script>
+    <%- include('partials/head', {
+        pageTitle: "AI Governance, Risk & Compliance | SMK Digitals",
+        pageDescription: "SMK Digitals is a South African AI Governance, Risk & Compliance (AI GRC) company helping organisations manage AI governance, identify technology risks, strengthen compliance readiness, and adopt AI responsibly.",
+        canonicalPath: "/"
+    }) %>
 
 </head>
 
 <body>
 
-
-    <%- include('partials/head') %>
-    
-    <!-- Title Tag (CRITICAL for SEO - should be 50-60 characters) -->
-    <title>AI Agency South Africa | Business Automation & AI Engineering | SMK Digitals</title>
-</head>
-<body>
     <%- include('partials/navbar', { active: active }) %>
 
     <main>
-        <!-- HERO SECTION: Optimized for main keywords -->
-        <section id="hero" itemscope itemtype="https://schema.org/Service">
+
+        <!-- HERO SECTION -->
+        <section id="hero"
+            itemscope
+            itemtype="https://schema.org/Service">
+
             <div class="hero-text">
+
                 <h1>AI Governance, Risk & Compliance That Builds Trust</h1>
-                <p>We help organisations govern AI responsibly, manage emerging technology risks, and strengthen compliance. SMK DIGITALS combines technology expertise with governance and risk management to help businesses adopt AI safely, responsibly, and with confidence.</p>
-                <p>Get a <strong>free AI audit</strong> and discover where your organisation may have AI-related governance, risk, and compliance gaps.</p>
-                <a href="/contact" class="btn" itemscope itemtype="https://schema.org/Action">
+
+                <p>
+                    We help organisations govern AI responsibly, manage emerging technology
+                    risks, and strengthen compliance. SMK DIGITALS combines technology
+                    expertise with governance and risk management to help businesses adopt
+                    AI safely, responsibly, and with confidence.
+                </p>
+
+                <p>
+                    Get a <strong>free AI audit</strong> and discover where your organisation
+                    may have AI-related governance, risk, and compliance gaps.
+                </p>
+
+                <a href="/contact"
+                    class="btn"
+                    itemscope
+                    itemtype="https://schema.org/Action">
+
                     <span itemprop="name">Get Your Free AI Audit</span>
+
                 </a>
-                
-                <!-- Hidden content for SEO (provides context without cluttering design) -->
-                <meta itemprop="name" content="AI Governance, Risk & Compliance">
-                <meta itemprop="description" content="Comprehensive AI governance, risk management, and compliance solutions for businesses">
+
+                <meta
+                    itemprop="name"
+                    content="AI Governance, Risk & Compliance"
+                >
+
+                <meta
+                    itemprop="description"
+                    content="Comprehensive AI governance, risk management, and compliance solutions for businesses"
+                >
+
             </div>
+
         </section>
-<!-- ABOUT SECTION: Trust & Authority Signals -->
-<section id="about">
-    <h2>Your AI Governance Partner</h2>
 
-    <p>
-        <strong>SMK Digitals (PTY) LTD</strong> is a South African
-        <strong>AI Governance, Risk &amp; Compliance (AI GRC)</strong> company
-        helping organisations adopt and use artificial intelligence responsibly,
-        securely, and with confidence. We help organisations identify AI-related
-        risks, establish governance frameworks, strengthen compliance readiness,
-        and develop responsible practices for the use of AI and emerging
-        technologies. Our approach combines technology expertise with governance,
-        risk management, and specialist professional support. When an engagement
-        requires specialised legal, privacy, cybersecurity, or other professional
-        expertise, we work with qualified specialists to ensure the right knowledge
-        is brought to the table. Whether your organisation is beginning its AI
-        journey or already using AI across its operations, SMK DIGITALS helps you
-        understand your risks, establish effective controls, and build a stronger
-        foundation for responsible AI adoption.
-    </p>
 
-    <a href="/faq" class="btn">Learn More About Our Approach</a>
-</section>
+        <!-- ABOUT SECTION -->
+        <section id="about">
 
-      <!-- MISSION & VISION: Strategic Keywords -->
-<section id="mission-vision">
-    <h2>Our Mission &amp; Vision in AI Governance</h2>
+            <h2>Your AI Governance Partner</h2>
 
-    <div class="service-item" itemscope itemtype="https://schema.org/Thing">
-        <h3>🎯 Our Mission</h3>
-        <p itemprop="description">
-            To help organisations adopt and use artificial intelligence responsibly by
-            providing practical AI Governance, Risk &amp; Compliance solutions that
-            identify risks, strengthen governance, support compliance, and promote
-            responsible technology adoption.
-        </p>
-    </div>
+            <p>
+                <strong>SMK Digitals (PTY) LTD</strong> is a South African
+                <strong>AI Governance, Risk &amp; Compliance (AI GRC)</strong> company
+                helping organisations adopt and use artificial intelligence responsibly,
+                securely, and with confidence. We help organisations identify AI-related
+                risks, establish governance frameworks, strengthen compliance readiness,
+                and develop responsible practices for the use of AI and emerging
+                technologies. Our approach combines technology expertise with governance,
+                risk management, and specialist professional support. When an engagement
+                requires specialised legal, privacy, cybersecurity, or other professional
+                expertise, we work with qualified specialists to ensure the right knowledge
+                is brought to the table. Whether your organisation is beginning its AI
+                journey or already using AI across its operations, SMK DIGITALS helps you
+                understand your risks, establish effective controls, and build a stronger
+                foundation for responsible AI adoption.
+            </p>
 
-    <div class="service-item" itemscope itemtype="https://schema.org/Thing">
-        <h3>🚀 Our Vision</h3>
-        <p itemprop="description">
-            To become a trusted AI Governance, Risk &amp; Compliance partner for
-            organisations across South Africa and beyond, helping businesses build
-            responsible AI practices, manage emerging technology risks, and create
-            long-term trust in the use of artificial intelligence.
-        </p>
-    </div>
-</section>
-           
-            
+            <a href="/faq" class="btn">
+                Learn More About Our Approach
+            </a>
+
+        </section>
+
+
+        <!-- MISSION & VISION -->
+        <section id="mission-vision">
+
+            <h2>Our Mission &amp; Vision in AI Governance</h2>
+
+            <div class="service-item"
+                itemscope
+                itemtype="https://schema.org/Thing">
+
+                <h3>🎯 Our Mission</h3>
+
+                <p itemprop="description">
+                    To help organisations adopt and use artificial intelligence responsibly
+                    by providing practical AI Governance, Risk &amp; Compliance solutions
+                    that identify risks, strengthen governance, support compliance, and
+                    promote responsible technology adoption.
+                </p>
+
+            </div>
+
+
+            <div class="service-item"
+                itemscope
+                itemtype="https://schema.org/Thing">
+
+                <h3>🚀 Our Vision</h3>
+
+                <p itemprop="description">
+                    To become a trusted AI Governance, Risk &amp; Compliance partner for
+                    organisations across South Africa and beyond, helping businesses build
+                    responsible AI practices, manage emerging technology risks, and create
+                    long-term trust in the use of artificial intelligence.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
 
     <%- include('partials/footer') %>
+
     <%- include('partials/scripts') %>
+
 </body>
+
 </html>

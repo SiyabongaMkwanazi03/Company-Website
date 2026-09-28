@@ -3,32 +3,69 @@
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // Close menu when a link is clicked
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // FAQ Toggle Functionality (only runs if FAQ items exist on the page)
-    const faqItems = document.querySelectorAll('.faq-item h3');
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const answer = item.nextElementSibling;
-            answer.classList.toggle('show');
-
-            const arrow = item.querySelector('span');
-            if (arrow) {
-                arrow.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+            if (navMenu) {
+                navMenu.classList.remove('active');
             }
         });
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("Page ready");
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll('.faq-item h3');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+
+            if (!answer) return;
+
+            answer.classList.toggle('show');
+
+            const arrow = item.querySelector('span');
+
+            if (arrow) {
+                arrow.style.transform =
+                    answer.classList.contains('show')
+                        ? 'rotate(180deg)'
+                        : 'rotate(0deg)';
+            }
+        });
     });
+
+
+    // ==========================================
+    // MOBILE FLIP BOX TOGGLE
+    // ==========================================
+
+    const flipBoxes = document.querySelectorAll('.flip-box');
+
+    flipBoxes.forEach(box => {
+
+        // Core Solutions cards do not use flip behaviour
+        if (box.closest('#core-solutions')) {
+            return;
+        }
+
+        box.addEventListener('click', () => {
+
+            // Only use tap-to-flip on mobile/tablet
+            if (window.matchMedia('(max-width: 768px)').matches) {
+
+                box.classList.toggle('flipped');
+
+            }
+
+        });
+
+    });
+
+    console.log("Page ready");
 </script>

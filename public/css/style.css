@@ -1604,3 +1604,280 @@ footer {
         font-size: 14px;
     }
 }
+/* =====================================================
+   SMK DIGITALS - MOBILE HOMEPAGE OVERRIDES
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: calc(100% - 30px);
+        margin: 10px auto;
+        padding: 10px 16px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+
+    .nav-menu {
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    /* Homepage Hero */
+    #hero {
+        width: 100%;
+        min-height: auto;
+        padding: 60px 20px 45px;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(32px, 8vw, 46px);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        overflow-wrap: break-word;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-text .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    /* About */
+    #about {
+        width: 100%;
+        padding: 45px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #about h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    #about p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* Mission & Vision */
+    #mission-vision {
+        width: 100%;
+        padding: 45px 20px;
+        box-sizing: border-box;
+    }
+
+    #mission-vision h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    #mission-vision .service-item {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 15px 0;
+        padding: 22px 18px;
+    }
+
+    #mission-vision .service-item h3 {
+        font-size: 21px;
+    }
+
+    #mission-vision .service-item p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Stack services vertically */
+    #services {
+        flex-direction: column;
+    }
+
+    /* Stack cards vertically */
+    .flip-boxes-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .flip-box {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #hero {
+        padding: 45px 16px 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+        line-height: 1.12;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .hero-text .btn {
+        width: 100%;
+        padding: 14px 18px;
+        box-sizing: border-box;
+    }
+
+    #about,
+    #mission-vision {
+        padding: 35px 16px;
+    }
+
+    #about h2,
+    #mission-vision h2 {
+        font-size: 25px;
+    }
+
+    #about p,
+    #mission-vision p {
+        font-size: 15px;
+    }
+
+    #mission-vision .service-item {
+        padding: 20px 16px;
+    }
+}
+
+
+/* ===== MOBILE MISSION & VISION CARDS ===== */
+@media (max-width: 768px) {
+
+    #mission-vision .service-item {
+        width: 90%;
+        max-width: 380px;
+        min-height: 220px;
+        margin: 20px auto;
+        padding: 30px 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        border-radius: 24px;
+        box-sizing: border-box;
+    }
+
+    #mission-vision .service-item h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    #mission-vision .service-item p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #mission-vision .service-item {
+        width: 92%;
+        min-height: 240px;
+        padding: 28px 22px;
+        border-radius: 26px;
+    }
+}
+
+
+/* ===== MOBILE FLIP CARD TAP CONTROL ===== */
+
+@media (max-width: 768px) {
+
+    /* Disable sticky mobile hover flip */
+    .flip-box:hover .flip-box-inner {
+        transform: none;
+    }
+
+    /* Tap once = flip */
+    .flip-box.flipped .flip-box-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Keep visual effect while card is flipped */
+    .flip-box.flipped {
+        filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.6))
+                drop-shadow(0 0 40px rgba(255, 140, 0, 0.3));
+    }
+
+    .flip-box.flipped .flip-box-front,
+    .flip-box.flipped .flip-box-back {
+        border: 1px solid rgba(255, 140, 0, 0.5);
+        background: rgba(255, 140, 0, 0.03);
+    }
+
+}
+
+
+/* ===== FIX MOBILE FLIP CARDS ===== */
+@media (max-width: 768px) {
+
+    /* Normal state */
+    .flip-box .flip-box-inner {
+        transform: rotateY(0deg);
+    }
+
+    /* Tapped state - must override hover */
+    .flip-box.flipped .flip-box-inner,
+    .flip-box.flipped:hover .flip-box-inner {
+        transform: rotateY(180deg) !important;
+    }
+
+    /* Tapped again returns to normal */
+    .flip-box:not(.flipped):hover .flip-box-inner {
+        transform: rotateY(0deg);
+    }
+
+    /* Core Solutions must never flip */
+    #core-solutions .flip-box .flip-box-inner,
+    #core-solutions .flip-box.flipped .flip-box-inner {
+        transform: none !important;
+    }
+}
+

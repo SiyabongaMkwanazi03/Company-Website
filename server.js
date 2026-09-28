@@ -75,22 +75,10 @@ app.get("/contact", (req, res) => {
     });
 });
 
-// Media Hub
-app.get("/media-hub", (req, res) => {
-    res.render("media-hub", {
-        active: "media-hub",
-        pageTitle: "AI Business Insights & Resources | SMK DIGITALS",
-        pageDescription:
-            "Explore AI insights, business tips and resources designed to help SMEs use artificial intelligence effectively.",
-        canonicalPath: "/media-hub"
-    });
-});
-
 // Contact form
 app.post("/contact", contactController.sendContactEmail);
 
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
 });
-

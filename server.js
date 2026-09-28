@@ -31,13 +31,14 @@ app.get("/robots.txt", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "robots.txt"));
 });
 
+
 // Home
 app.get("/", (req, res) => {
     res.render("index", {
         active: "home",
-        pageTitle: "AI Automation for SMEs in South Africa | SMK DIGITALS",
+        pageTitle: "Technology Solutions, Software, AI & Automation | SMK Digitals",
         pageDescription:
-            "SMK DIGITALS provides AI automation solutions that help South African small and medium businesses improve efficiency, generate leads and grow.",
+            "SMK Digitals helps South African businesses solve problems, improve operations and grow through custom software, web development, AI, automation and digital solutions.",
         canonicalPath: "/"
     });
 });
@@ -46,9 +47,9 @@ app.get("/", (req, res) => {
 app.get("/services", (req, res) => {
     res.render("services", {
         active: "services",
-        pageTitle: "AI Automation Services for Businesses | SMK DIGITALS",
+        pageTitle: "Software, AI, Automation & Web Development | SMK Digitals",
         pageDescription:
-            "Explore AI automation, AI chatbots, business process automation and AI solutions designed to help SMEs improve efficiency and grow.",
+            "Explore our custom software development, web development, AI solutions, business process automation, digital systems and technology consulting services.",
         canonicalPath: "/services"
     });
 });
@@ -57,9 +58,9 @@ app.get("/services", (req, res) => {
 app.get("/faq", (req, res) => {
     res.render("faq", {
         active: "faq",
-        pageTitle: "AI Automation FAQ | SMK DIGITALS",
+        pageTitle: "Technology Services FAQ | SMK Digitals",
         pageDescription:
-            "Find answers to common questions about AI automation, AI chatbots and AI solutions for small and medium businesses.",
+            "Find answers to common questions about SMK Digitals' software development, web development, AI, automation, digital systems and technology consulting.",
         canonicalPath: "/faq"
     });
 });
@@ -68,12 +69,13 @@ app.get("/faq", (req, res) => {
 app.get("/contact", (req, res) => {
     res.render("contact", {
         active: "contact",
-        pageTitle: "Contact SMK DIGITALS | AI Automation Solutions",
+        pageTitle: "Contact SMK Digitals | Technology Solutions",
         pageDescription:
-            "Contact SMK DIGITALS to discuss AI automation, chatbots and business solutions for your company.",
+            "Contact SMK Digitals to discuss your business needs and explore custom software, web development, AI, automation and digital technology solutions.",
         canonicalPath: "/contact"
     });
 });
+
 
 // Contact form
 app.post("/contact", contactController.sendContactEmail);
